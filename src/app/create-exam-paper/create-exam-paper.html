@@ -1,0 +1,29 @@
+<div class="row-section">
+
+        <mat-form-field class="row-input-field">
+            <mat-label>Exam ID</mat-label>
+            <input matInput type="text" [(ngModel)]="examId" disabled>
+
+          </mat-form-field>
+      
+        <mat-form-field class="row-input-field">
+          <mat-label>Name of Examination</mat-label>
+          <input matInput placeholder="Enter name here" [(ngModel)]="examName"/>
+          <button mat-button *ngIf="examId" matSuffix mat-icon-button aria-label="Clear" (click)="value=''" >
+            <mat-icon>close</mat-icon>
+          </button>
+        </mat-form-field>
+
+    <div class="row-input-field">
+    <mat-form-field >
+        <mat-label>Select a question type</mat-label>
+        <mat-select [(value)]="selected">
+            <mat-option value="option1">MCQ</mat-option>
+            <mat-option value="option2">Subjective</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    
+    <button mat-raised-button color="primary" class="side-button">Add Question</button>
+    </div>
+</div>
