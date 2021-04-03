@@ -1,0 +1,9 @@
+<div>
+    <span>{{serialNo}}. </span>
+    <span> {{quesObj.question}}</span>
+    <p class="option-section" *ngFor="let item of quesObj.options; let i = index">
+        <input type="checkbox" (change)="item['checked'] = $event.target.checked; changeOptions()" [(ngModel)]="item['checked']"/>
+        <span>{{item.id}}. </span>
+        <span>{{item.option}}</span>
+    </p>
+</div>

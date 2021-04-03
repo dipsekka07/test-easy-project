@@ -1,10 +1,35 @@
 .row-input-field {
-    min-width: 300px;
-    display: table;
-    margin: 10px 0px 0px 20px;
-
-  }
+  margin: 0px 0px 10px 0px;
+}
   
-  .side-button {
+.row-input-field>input {
+  min-width: 220px;
+  height: 20px;
+}
+
+.side-button {
     margin-left: 20px;
 }
+mat-label.row-input-label {
+  display: block;
+}
+
+span.material-icons {
+  font-size: 20px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+}
+
+button.mat-icon-button {
+  position: relative;
+  height: 24px;
+  width: 24px;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+button.left-margin {
+  margin-left: 5px;
+}
+

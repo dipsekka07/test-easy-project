@@ -1,29 +1,34 @@
-<div class="row-section">
+<div class="question-row-section">
 
-        <mat-form-field class="row-input-field">
-            <mat-label>Exam ID</mat-label>
+          <div class="row-input-field">
+            <mat-label class="row-input-label">Exam ID</mat-label>
             <input matInput type="text" [(ngModel)]="examId" disabled>
+          </div>
 
-          </mat-form-field>
-      
-        <mat-form-field class="row-input-field">
-          <mat-label>Name of Examination</mat-label>
-          <input matInput placeholder="Enter name here" [(ngModel)]="examName"/>
-          <button mat-button *ngIf="examId" matSuffix mat-icon-button aria-label="Clear" (click)="value=''" >
-            <mat-icon>close</mat-icon>
-          </button>
-        </mat-form-field>
+          <div class="row-input-field">
+            <mat-label class="row-input-label">Name of Examination</mat-label>
+            <input matInput placeholder="Enter name here" [(ngModel)]="examName"/>
+            <button mat-button class="icon-button"  matSuffix mat-icon-button aria-label="Clear" (click)="examName=''" >
+              <span class="material-icons">close</span>
+            </button>
+          </div>
 
-    <div class="row-input-field">
-    <mat-form-field >
-        <mat-label>Select a question type</mat-label>
-        <mat-select [(value)]="selected">
-            <mat-option value="option1">MCQ</mat-option>
-            <mat-option value="option2">Subjective</mat-option>
-        </mat-select>
-    </mat-form-field>
+          <div class="row-input-field">
+            <mat-label class="row-input-label">Select a question type</mat-label>
+          </div>
 
+        <select [(ngModel)]="selectedType">
+          <option *ngFor="let choice of questionTypes" [ngValue]="choice">
+               {{choice.name}}
+           </option>
+        </select>
+
+        <button mat-button class="left-margin" color="primary" (click)="addQuestion(selectedType)"> Add question</button>
+
+        <ul>
+          <li *ngFor="let item of items; let i = index">
+            <app-question [quesNo]="item.quesNo" [quesType]="item.quesTyp"></app-question>
+          </li>
+        </ul>
     
-    <button mat-raised-button color="primary" class="side-button">Add Question</button>
-    </div>
 </div>

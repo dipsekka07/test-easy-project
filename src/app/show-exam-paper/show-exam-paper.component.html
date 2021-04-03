@@ -1,0 +1,21 @@
+<div class="question-row-section">
+
+    <div class="row-input-field">
+        <mat-label class="row-input-label">Exam ID</mat-label>
+        <span>{{examData.exam_id}}</span>
+      </div>
+
+    <div class="row-input-field">
+        <mat-label class="row-input-label">Exam ID</mat-label>
+        <span>{{examData.examName}}</span>
+      </div>
+
+      <ul>
+        <li *ngFor="let item of examQues; let i = index">
+          <app-show-question [serialNo]="i+1" [quesObj]="item" ></app-show-question>
+        </li>
+      </ul>
+
+      <!-- <button mat-button class="left-margin" color="primary" (click)="submit()"> Submit </button> -->
+
+</div>

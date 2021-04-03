@@ -1,0 +1,12 @@
+.row-input-label{
+    &::after { 
+        content: ": ";
+      }
+}
+.question-row-section {
+    margin: 15px;
+}
+
+li {
+    display: contents;
+}

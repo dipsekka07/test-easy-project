@@ -1,0 +1,27 @@
+{
+    "exam_id": 1,
+    "examName": "General_Knowqledge_2021",
+    "examObj" : [
+        {
+            "question": "Where is Tajmahal located?",
+            "options" : [
+                {"id": "A", "option":"Mumbai"},
+                {"id": "B", "option":"Chennai"},
+                {"id": "C", "option":"Bangalore"},
+                {"id": "D", "option":"Agra"}
+            ],
+            "ques_id": 1,
+            "ques_type": 0
+        },{
+            "question": "Where is Qutab Minar located?",
+            "options" : [
+                {"id": "A", "option":"Mumbai"},
+                {"id": "B", "option":"Chennai"},
+                {"id": "C", "option":"Delhi"},
+                {"id": "D", "option":"Agra"}
+            ],
+            "ques_id": 1,
+            "ques_type": 0
+        }
+    ]
+}

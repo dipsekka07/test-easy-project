@@ -1,0 +1,19 @@
+<div class="question-section">
+    Q{{quesNo}}. {{quesType}}
+    <div *ngIf="isCurrentEditable">
+        <textarea id="QuesId{{quesNo}}" [(ngModel)]="question"  placeholder="Enter question here..."></textarea> 
+    </div>
+    <div *ngIf="isMCQ" class="ans-section">
+            <span class= "option-item" *ngFor="let item of possibleAns; let i = index">
+                {{item.id}}. {{item.option}}
+                <button mat-button class="icon-button"  matSuffix mat-icon-button aria-label="Clear" (click)="removeOption(item);" >
+                    <span class="material-icons">close</span>
+                  </button>
+            </span>
+        <textarea class="option-section" [(ngModel)]="option" placeholder="Enter an option here..."></textarea>
+        <button mat-button class="left-margin option-add-button" color="primary" (click)="addOption(option); option='';">Add an option</button>
+        <button mat-button class="left-margin option-save-button" color="primary" (click)="saveQuestion(); option='';">{{saveString}}</button>
+    </div>
+    <div *ngIf="!isMCQ"></div>
+
+</div>
